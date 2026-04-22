@@ -1,0 +1,208 @@
+import { createPlaceholderImage } from "@/lib/storage";
+
+export const REMOVED_PRODUCT_NAMES = new Set(["gova", "beans"]);
+
+export const PRODUCT_CATALOG = [
+  {
+    id: "prod-carrot",
+    name: "Carrot",
+    category: "Root Veg",
+    unit: "kg",
+    pricePerKg: 300,
+    image: "https://www.thespruceeats.com/thmb/pZ2yFDDyBmS9BVTSWasxKgAHJuE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/carrots1-355722c899f641de96a80e3c1aa666b4.jpg",
+    active: true,
+  },
+  {
+    id: "prod-leeks",
+    name: "Leeks",
+    category: "Allium",
+    unit: "kg",
+    pricePerKg: 340,
+    image: "https://www.rkrvegetable.com/medias/products/small/153/20180108-163648.jpg",
+    active: true,
+  },
+  {
+    id: "prod-beetroot",
+    name: "Beetroot",
+    category: "Root Veg",
+    unit: "kg",
+    pricePerKg: 280,
+    image: "https://vegpower.org.uk/wp-content/uploads/2022/07/shutterstock_535069978-scaled.jpg",
+    active: true,
+  },
+  {
+    id: "prod-potato",
+    name: "Potato",
+    category: "Root Veg",
+    unit: "kg",
+    pricePerKg: 260,
+    image: "https://growhoss.com/cdn/shop/articles/potato_ecdbb7b2-3914-4edb-818d-eb6abfc66627_460x@2x.jpg?v=1761159166",
+    active: true,
+  },
+  {
+    id: "prod-onion",
+    name: "Onion",
+    category: "Allium",
+    unit: "kg",
+    pricePerKg: 220,
+    image: "https://www.orgpick.com/cdn/shop/products/Organic-Onion_large_b56c7be1-0215-410a-9ef5-cb89d00b126b.jpg?v=1571986561",
+    active: true,
+  },
+  {
+    id: "prod-tomato",
+    name: "Tomato",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 260,
+    image: "https://ajeanneinthekitchen.com/wp-content/uploads/2024/08/image.png?w=700",
+    active: true,
+  },
+  {
+    id: "prod-cabbage",
+    name: "Cabbage",
+    category: "Leafy Greens",
+    unit: "kg",
+    pricePerKg: 240,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJ1zp6hZdZi9-No8KKcPceZjfBkjaN1y5Kg&s",
+    active: true,
+  },
+  {
+    id: "prod-spinach",
+    name: "Spinach",
+    category: "Leafy Greens",
+    unit: "bundle",
+    pricePerKg: 180,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaD6rbm25Wnv4RiqSuc2yznskg2g_4CXvcaA&s",
+    active: true,
+  },
+  {
+    id: "prod-green-beans",
+    name: "Green Beans",
+    category: "Pods",
+    unit: "kg",
+    pricePerKg: 340,
+    image: "https://www.incredibleseeds.ca/cdn/shop/products/BeanBush-Provider_460x@2x.jpg?v=1679716832",
+    active: true,
+  },
+  {
+    id: "prod-cucumber",
+    name: "Cucumber",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 230,
+    image: "https://www.greendna.in/cdn/shop/products/cucumber_1_700x.jpg?v=1594219681",
+    active: true,
+  },
+  {
+    id: "prod-brinjal",
+    name: "Brinjal",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 250,
+    image: "https://tropicalfresh.lk/wp-content/uploads/Untitled-design-2023-03-19T140324.048.jpg",
+    active: true,
+  },
+  {
+    id: "prod-okra",
+    name: "Okra",
+    category: "Pods",
+    unit: "kg",
+    pricePerKg: 280,
+    image: "https://www.kikkoman.com/en/cookbook/assets/img/GlossaryOkra.jpg",
+    active: true,
+  },
+  {
+    id: "prod-pumpkin",
+    name: "Pumpkin",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 190,
+    image: "https://edibleparadise.com/wp-content/uploads/2023/09/AdobeStock_523666468_kabocha-squash.jpg",
+    active: true,
+  },
+  {
+    id: "prod-sweet-potato",
+    name: "Sweet Potato",
+    category: "Root Veg",
+    unit: "kg",
+    pricePerKg: 240,
+    image: "https://www.kikkoman.com/en/cookbook/assets/img/GlossarySweetPotatoes.jpg",
+    active: true,
+  },
+  {
+    id: "prod-radish",
+    name: "Radish",
+    category: "Root Veg",
+    unit: "kg",
+    pricePerKg: 200,
+    image: "https://www.simplyseed.co.uk/user/products/large/Radish%20Albena.jpg",
+    active: true,
+  },
+  {
+    id: "prod-garlic",
+    name: "Garlic",
+    category: "Allium",
+    unit: "kg",
+    pricePerKg: 900,
+    image: "https://objectstorage.ap-mumbai-1.oraclecloud.com/n/softlogicbicloud/b/cdn/o/products/310129--01--1555692321.jpeg",
+    active: true,
+  },
+  {
+    id: "prod-ginger",
+    name: "Ginger",
+    category: "Spicy",
+    unit: "kg",
+    pricePerKg: 850,
+    image: "https://img.drz.lazcdn.com/static/lk/p/2042fd6f2b5e6917c6b252ace97524fa.jpg_720x720q80.jpg",
+    active: true,
+  },
+  {
+    id: "prod-capsicum",
+    name: "Capsicum",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 380,
+    image: "https://img.drz.lazcdn.com/static/bd/p/72a39360663f3f610dfadfcad1f098b2.jpg_720x720q80.jpg",
+    active: true,
+  },
+  {
+    id: "prod-bottle-gourd",
+    name: "Bottle Gourd",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 180,
+    image: "https://blog-images-1.pharmeasy.in/blog/production/wp-content/uploads/2022/07/22134631/22.jpg",
+    active: true,
+  },
+  {
+    id: "prod-bitter-gourd",
+    name: "Bitter Gourd",
+    category: "Spicy",
+    unit: "kg",
+    pricePerKg: 320,
+    image: "https://i0.wp.com/plantcraft.in/wp-content/uploads/2020/12/bittergourdseeds_800x.jpg?fit=800%2C800&ssl=1",
+    active: true,
+  },
+  {
+    id: "prod-snake-gourd",
+    name: "Snake Gourd",
+    category: "Fresh",
+    unit: "kg",
+    pricePerKg: 180,
+    image: "https://thumbs.dreamstime.com/b/fresh-green-snake-gourd-vegetables-hanging-market-close-up-shot-numerous-long-slender-ribbed-gourds-together-likely-411945394.jpg",
+    active: true,
+  },
+];
+
+const productImageLookup = new Map(
+  PRODUCT_CATALOG.map((product) => [product.name.trim().toLowerCase(), product.image])
+);
+
+export function isRemovedProductName(name) {
+  return REMOVED_PRODUCT_NAMES.has(String(name || "").trim().toLowerCase());
+}
+
+export function resolveProductImage(name, explicitImage = "") {
+  const label = String(name || "").trim();
+  return explicitImage || productImageLookup.get(label.toLowerCase()) || createPlaceholderImage(label || "Product");
+}
